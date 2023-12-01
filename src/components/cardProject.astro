@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props{
+imageUrl:any,
+title:string,
+info:string,
+tech:any[],
+projectLinks:string
+}
+
+const { imageUrl,title,info,tech,projectLinks} = Astro.props;
+---
+
+<article class="grid gap-4 md:grid-cols-2 sm:gap-7 group">
+    <section class="">   
+        <Image src={imageUrl} alt="projects" sizes='100vw'>
+    </section>
+    <section class="flex flex-col justify-center gap-2.5 ">
+            <h3 class="">{title}</h3>
+            <p>{info}</p>
+            <div class="flex gap-2 items-center mb-1">
+                {tech?.map(e => <img src={e} class="w-7" ></img>)}
+            </div>
+            <div class="flex justify-start gap-3">
+                <a href={projectLinks} target="_blank" class=" py-2 px-7 rounded-sm border-4 font-semibold items-center text-lg ">
+                    Code 
+                </a>
+            </div>
+    </section>
+</article>
