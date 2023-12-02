@@ -14,7 +14,7 @@ const { imageUrl,title,info,tech,projectLinks} = Astro.props;
 
 <article class="grid gap-4 md:grid-cols-2 sm:gap-7 ">
     <section class="border-4 ">   
-        <Image src={imageUrl} alt="projects" sizes='100vw' class="">
+        <Image src={imageUrl} alt="projects" sizes='100vw' class="min-h-full min-w-full">
     </section>
     <section class="flex flex-col justify-center gap-2.5 ">
             <h3 class="text-color3 font-semibold">{title}</h3>
