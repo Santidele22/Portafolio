@@ -1,31 +1,26 @@
 ---
 import { Image } from 'astro:assets';
+import {proyects} from "../utils/proyects.js"
 
-interface Props{
-imageUrl:any,
-title:string,
-info:string,
-tech:any[],
-projectLinks:string
-}
-
-const { imageUrl,title,info,tech,projectLinks} = Astro.props;
 ---
 
-<article class="grid gap-4 md:grid-cols-2 sm:gap-7 ">
-    <section class="border-4 ">   
-        <Image src={imageUrl} alt="projects" sizes='100vw' class="min-h-full min-w-full">
-    </section>
-    <section class="flex flex-col justify-center gap-2.5 ">
-            <h3 class="text-color3 font-semibold">{title}</h3>
-            <p class="text-slate-200">{info}</p>
-            <div class="flex gap-2 items-center mb-1">
-                {tech?.map(e => <img src={e} class="w-7" ></img>)}
+<article class="grid auto-rows-[300px] grid-cols-3 gap-4 max-w-full max-h-full text-white">
+    {proyects.map((proyect, i) => (
+      <section
+        class={`row-span-1 rounded-xl border-2 border-slate-400/10 bg-color3 p-4 dark:bg-neutral-900 ${
+          i === 3 || i === 0 ? "col-span-2 " : i === 4 ? "col-span-3" : ""
+        }`}
+      >
+      <header class="w-full h-full flex flex-col-reverse">
+        <h3 class="text-lg ">{proyect.title}</h3>
+        <div class="lex gap-2 items-center mb-1">
+            {proyect.tech?.map((technology) => {
+                {console.log(technology)}
+               <img src={technology} />
+            })}
             </div>
-            <div class="flex justify-start gap-3">
-                <a href={projectLinks} target="_blank" class=" py-2 px-7 rounded-sm border-4 font-semibold items-center text-lg border-color1 bg-color3  text-white hover:bg-color2">
-                    Code 
-                </a>
-            </div>
-    </section>
-</article>
+       </header>
+
+      </section>
+    ))}
+  </article>
