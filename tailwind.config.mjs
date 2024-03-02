@@ -10,6 +10,10 @@ export default {
         color4: "#3C3352",
         color5: "#2D2A33",
       },
+      backgroundImage: {
+        "hero-pattern": "url('/src/assets/image/aegir-chat.png')",
+        "footer-texture": "url('./assets/footer-texture.png')",
+      },
     },
   },
   plugins: [],

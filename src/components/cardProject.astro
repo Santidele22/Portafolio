@@ -1,26 +1,36 @@
 ---
-import { Image } from 'astro:assets';
-import {proyects} from "../utils/proyects.js"
-
+import { Image } from "astro:assets";
+import { proyects } from "../utils/proyects.js";
 ---
 
-<article class="grid auto-rows-[300px] grid-cols-3 gap-4 max-w-full max-h-full text-white">
-    {proyects.map((proyect, i) => (
+<article
+  class="grid auto-rows-[300px] grid-cols-3 gap-4 max-w-full max-h-full text-white text-lg font-bold"
+>
+  {
+    proyects.map((proyect, i) => (
       <section
-        class={`row-span-1 rounded-xl border-2 border-slate-400/10 bg-color3 p-4 dark:bg-neutral-900 ${
+        class={`row-span-1 rounded-xl  p-4 dark:bg-neutral-900   ${
           i === 3 || i === 0 ? "col-span-2 " : i === 4 ? "col-span-3" : ""
         }`}
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(${proyect.backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          width: "100%",
+          height: "100%",
+          position: "relative"
+        }}
       >
-      <header class="w-full h-full flex flex-col-reverse">
-        <h3 class="text-lg ">{proyect.title}</h3>
-        <div class="lex gap-2 items-center mb-1">
-            {proyect.tech?.map((technology) => {
-                {console.log(technology)}
-               <img src={technology} />
-            })}
-            </div>
-       </header>
-
+        <header class="w-full h-full flex flex-col-reverse ">
+          <div class="flex gap-2 items-center mb-1">
+            {proyect.tech?.map((technology) => (
+              <img src={technology} alt={technology} class="w-7 h-7" />
+            ))}
+          </div>
+          <h3 class="text-lg ">{proyect.title}</h3>
+        </header>
       </section>
-    ))}
-  </article>
+    ))
+  }
+</article>
