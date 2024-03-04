@@ -9,7 +9,7 @@ export const proyects = [
       "./icons/mongodb.svg",
     ],
     projectLinks: "https://github.com/NicoBalbuena/ProyectoMountain",
-    backgroundImage: "./image/mountain-bg.jpg",
+    backgroundImage: "./image/mountain-bg.webp",
   },
   {
     title: "App Dog",
@@ -21,7 +21,7 @@ export const proyects = [
       "./icons/postgresql.svg",
     ],
     projectLinks: "https://github.com/Santidele22/landing-dogs",
-    backgroundImage: "./image/dog-bg.jpg",
+    backgroundImage: "./image/dog-bg.webp",
   },
   {
     title: "App Videogame",
@@ -33,7 +33,7 @@ export const proyects = [
       "./icons/postgresql.svg",
     ],
     projectLinks: "https://github.com/Santidele22",
-    backgroundImage: "./image/games-bg.jpg",
+    backgroundImage: "./image/games-bg.webp",
   },
 
   {
@@ -45,7 +45,7 @@ export const proyects = [
       "./icons/node.svg",
       "./icons/html.svg",
     ],
-    backgroundImage: "./image/aegir-bg.jpg",
+    backgroundImage: "./image/aegir-bg.webp",
   },
   {
     title: "App RickandMorty",
@@ -57,6 +57,6 @@ export const proyects = [
       "./icons/postgresql.svg",
     ],
     projectLinks: "https://github.com/pi-rym/PI-Santidele22",
-    backgroundImage: "./image/rickandmorty-bg.jpg",
+    backgroundImage: "./image/rickandmorty-bg.webp",
   },
 ];
