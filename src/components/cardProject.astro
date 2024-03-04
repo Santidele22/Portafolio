@@ -4,13 +4,13 @@ import { proyects } from "../utils/proyects.js";
 ---
 
 <article
-  class="grid auto-rows-[300px] grid-cols-3 gap-4 max-w-full max-h-full text-white text-lg font-bold "
+  class="grid grid-cols-1 auto-rows-[300px] md:grid-cols-3 gap-4 max-w-full max-h-full text-white text-lg font-bold "
 >
   {
     proyects.map((proyect, i) => (
       <section
-        class={`row-span-1 rounded-xl p-4 dark:bg-neutral-900 group hover:p-0 ${
-          i === 3 || i === 0 ? "col-span-2 " : i === 4 ? "col-span-3" : ""
+        class={`row-span-1 rounded-xl p-4 dark:bg-neutral-900 group hover:p-0  ${
+          i === 3 || i === 0 ? "col-span-1 md:col-span-2" : i === 4 ? "col-span-1 md:col-span-3" : ""
         }`}
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(${proyect.backgroundImage})`,
