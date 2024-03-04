@@ -1,11 +1,7 @@
 ---
 //component
 import CardProject from "./cardProject.astro";
-//image
-import dogImage from "../assets/image/dog.png";
-import rickImage from "../assets/image/rickandmorty.png";
-import videogameImage from "../assets/image/videogame.png";
-import mountain from "../assets/image/mountain.png";
+//Proyects info
 ---
 
 <section>
@@ -20,61 +16,7 @@ import mountain from "../assets/image/mountain.png";
   </h2>
   <div class="flex flex-col gap-5 mt-4">
     <div class="grid gap-10">
-      <CardProject
-        imageUrl={mountain}
-        title="Mountain Haven"
-        info="Mountain Haven es una plataforma online desarrollada para facilitar el alquiler de alojamientos. Como responsable del backend, integré Cloudinary, configuré rutas y seleccioné tecnologías como MongoDB, Express, React y Tailwind CSS. Además, añadimos autenticación con Google y pagos seguros con Mercado Pago. Ofrece una experiencia intuitiva y segura para propietarios e inquilinos."
-        tech={[
-          "./icons/react.svg",
-          "./icons/tailwind.svg",
-          "./icons/express-.svg",
-          "./icons/cloudinary.svg",
-          "./icons/mongodb.svg",
-        ]}
-        projectLinks="https://github.com/NicoBalbuena/ProyectoMountain"
-      />
-
-      <CardProject
-        imageUrl={dogImage}
-        title="Landing Dog"
-        info="Mi primer proyecto individual en Henry, consiste en una landing page dedicada a los amantes de los perros. Desarrollado utilizando tecnologías como React, CSS, Express, Sequelize y PostgreSQL."
-        tech={[
-          "./icons/react.svg",
-          "./icons/css.svg",
-          "./icons/express-.svg",
-          "./icons/sequelize.svg",
-          "./icons/postgresql.svg",
-        ]}
-        projectLinks="https://github.com/Santidele22/landing-dogs"
-      />
-
-      <CardProject
-        imageUrl={videogameImage}
-        title="Landing Videogame"
-        info="Un proyecto individual en Henry que se centra en una landing page temática de videojuegos. Utilicé tecnologías como React, CSS, Express, Sequelize y PostgreSQL para llevarlo a cabo."
-        tech={[
-          "./icons/react.svg",
-          "./icons/css.svg",
-          "./icons/express-.svg",
-          "./icons/sequelize.svg",
-          "./icons/postgresql.svg",
-        ]}
-        projectLinks="https://github.com/Santidele22"
-      />
-
-      <CardProject
-        imageUrl={rickImage}
-        title="Landing RickandMorty"
-        info="Otro proyecto individual en Henry que gira en torno a una landing page inspirada en la serie Rick and Morty. Implementé tecnologías como React, CSS, Express, Sequelize y PostgreSQL."
-        tech={[
-          "./icons/react.svg",
-          "./icons/css.svg",
-          "./icons/express-.svg",
-          "./icons/sequelize.svg",
-          "./icons/postgresql.svg",
-        ]}
-        projectLinks="https://github.com/pi-rym/PI-Santidele22"
-      />
+    <CardProject/>
     </div>
   </div>
 </section>
