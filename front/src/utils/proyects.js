@@ -9,7 +9,7 @@ export const proyects = [
       "./icons/mongodb.svg",
     ],
     projectLinks: "https://github.com/NicoBalbuena/ProyectoMountain",
-    backgroundImage: "./image/mountain-bg.webp",
+    backgroundImage: "./image/mountain-bg2.webp",
   },
   {
     title: "App Dog",

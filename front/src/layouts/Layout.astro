@@ -20,13 +20,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="mx-auto max-w-4xl flex flex-col mb-5 px-5">
     <slot />
   </body>
 </html>
 
 <style is:global>
-  
   :root {
     --title: 3rem;
     --subTitle: 2rem;
@@ -63,5 +62,10 @@ const { title } = Astro.props;
   a {
     text-decoration: none;
     cursor: pointer;
+  }
+  li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 1rem;
   }
 </style>

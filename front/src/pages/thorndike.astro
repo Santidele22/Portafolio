@@ -1,0 +1,48 @@
+---
+import Header from "../components/header.astro";
+import Layout from "../layouts/Layout.astro";
+
+const getThorndikePresentation = async () => {
+    try {
+    const options = await fetch("http://localhost:5000/presentation")
+      .then((response) => response.json())
+      .then((data) => data);
+    return options;
+  } catch (error) {
+    throw new Error(error)
+  }
+};
+const getThorndikeOptions = async () => {
+  try {
+    const response = await fetch("http://localhost:5000/options")
+    const options = await response.json();
+    return options
+  } catch (error) {
+    throw new Error(error)
+  }
+};
+const options = await getThorndikeOptions()
+const about = options.options[0]
+const education = options.options[1]
+const presentacion = await getThorndikePresentation()
+---
+
+<Layout title="Santiago Delebecq">
+  <Header />
+  <main
+    class="w-full h-full flex-col justify-evenly gap-4 bg-white text-black text-center"
+  >
+    <h1>Thorndike</h1>
+    <div class="flex-col p-5">
+      <p class="max-w-full"><span></span>{presentacion}</p>
+      <section class="flex justify-center mt-3 text-white">
+       <ul>
+        <li class="p-4 gap-2  border-2 border-r-2 bg-color3 cursor-pointer" >{about}</li>
+        <li  class="p-4 gap-2  border-2 border-r-2  bg-color3 cursor-pointer " >{education}</li>
+    </ul> 
+       
+
+      </section>
+    </div>
+  </main>
+</Layout>
