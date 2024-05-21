@@ -10,32 +10,8 @@ export const proyects = [
     ],
     projectLinks: "https://github.com/NicoBalbuena/ProyectoMountain",
     backgroundImage: "./image/mountain-bg2.webp",
+    isDeployed: false,
   },
-  {
-    title: "App Dog",
-    tech: [
-      "./icons/react.svg",
-      "./icons/css.svg",
-      "./icons/express-.svg",
-      "./icons/sequelize.svg",
-      "./icons/postgresql.svg",
-    ],
-    projectLinks: "https://github.com/Santidele22/landing-dogs",
-    backgroundImage: "./image/dog-bg.webp",
-  },
-  {
-    title: "App Videogame",
-    tech: [
-      "./icons/react.svg",
-      "./icons/css.svg",
-      "./icons/express-.svg",
-      "./icons/sequelize.svg",
-      "./icons/postgresql.svg",
-    ],
-    projectLinks: "https://github.com/Santidele22",
-    backgroundImage: "./image/games-bg.webp",
-  },
-
   {
     title: "Aegir chat",
     projectLinks: "https://github.com/Santidele22/AegirChat",
@@ -46,6 +22,7 @@ export const proyects = [
       "./icons/html.svg",
     ],
     backgroundImage: "./image/aegir-bg.webp",
+    isDeployed: false,
   },
   {
     title: "App RickandMorty",
@@ -58,5 +35,27 @@ export const proyects = [
     ],
     projectLinks: "https://github.com/pi-rym/PI-Santidele22",
     backgroundImage: "./image/rickandmorty-bg.webp",
+    isDeployed: false,
+  },
+  {
+    title: "JM services",
+    tech: [
+      "./icons/astro.svg",
+      "./icons/css.svg",
+    ],
+    projectLinks: "https://github.com/Santidele22/JM-services",
+    backgroundImage: "./image/jm.webp",
+    isDeployed: true,
+    deployLink: "https://jm-services.vercel.app/"
+  },
+  {
+    title: "Gym website",
+    tech: [
+      "./icons/react.svg",
+      "./icons/css.svg",
+    ],
+    projectLinks: "https://github.com/Santidele22/Gym-Website",
+    backgroundImage: "./image/gym.webp",
+    isDeployed: false,
   },
 ];

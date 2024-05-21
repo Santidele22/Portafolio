@@ -3,52 +3,50 @@ import { proyects } from "../utils/proyects.js";
 ---
 
 <article
-  class="grid grid-cols-1 auto-rows-[300px] md:grid-cols-3 gap-4 max-w-full max-h-full text-white text-lg font-bold"
+	class="grid grid-cols-1 auto-rows-[300px] md:grid-cols-3 gap-4 max-w-full max-h-full text-white text-lg font-bold "
 >
-  {
-    proyects.map((proyect, i) => (
-      <section
-        class={`row-span-1 rounded-xl p-4 dark:bg-neutral-900 group hover:p-0  ${
-          i === 3 || i === 0
-            ? "col-span-1 md:col-span-2"
-            : i === 4
-              ? "col-span-1 md:col-span-3"
-              : ""
-        }`}
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(${proyect.backgroundImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
-          height: "100%",
-          position: "relative",
-        }}
-      >
-        <div class="absolute min-h-full min-w-full bg-black/40 flex items-center justify-center group-hover:bottom-0 opacity-0 group-hover:opacity-100  ">
-          <a
-            href={proyect.projectLinks}
-            target="_blank"
-            class="bg-color3 text-white py-2 px-5 rounded-md"
-          >
-            Code
-          </a>
-        </div>
+	{
+		proyects.map((proyect, i) => (
+			<section
+				class={`row-span-1 rounded-xl p-4 dark:bg-neutral-900 group hover:p-0  ${
+					i === 3 || i === 0
+						? "col-span-1 md:col-span-2"
+						: i === 4
+							? "col-span-1 md:col-span-3"
+							: ""
+				}`}
+			>
+				<header class="w-full h-full flex flex-col-reverse relative">
+					<picture class="w-full h-full absolute">
+					<img
+						src={proyect.backgroundImage}
+						alt={proyect.title}
+						loading="lazy"
+						class="w-full h-full object-cover "
+						/>
+					</picture>
+					<section class="relative p-2 ">
+								<h3 class="text-lg  ">{proyect.title}</h3>
 
-        <header class="w-full h-full flex flex-col-reverse ">
-          <div class="flex gap-2 items-center mb-1">
-            {proyect.tech?.map((technology) => (
-              <img
-                src={technology}
-                alt={technology}
-                class="w-7 h-7"
-                loading="lazy"
-              />
-            ))}
-          </div>
-          <h3 class="text-lg ">{proyect.title}</h3>
-        </header>
-      </section>
-    ))
-  }
+					<div class="flex gap-2 items-center mb-1 ">
+						{proyect.tech?.map((technology) => (
+							<img
+								src={technology}
+								alt={technology}
+								class="w-7 h-7"
+								loading="lazy"
+							/>
+						))}
+					</div>
+					<div class="flex gap-2 mt-4 font-semibold text-sm">
+					<a class="p-2 bg-color4 rounded-sm cursor-pointer" href={proyect.projectLinks}>Code</a>
+						{proyect.isDeployed ? (
+							<a class="p-2 bg-color4 rounded-sm cursor-pointer" href={proyect.deployLink}>WebPage</a>
+						) : ""}
+					</div>
+					</section>
+				</header>
+			</section>
+		))
+	}
 </article>
